@@ -7,13 +7,21 @@
 </head>
 
 <body>
+    <form>
+        <p>Nhập năm: </p>
+        <input type="number" id="year">
+        <input type="button" onclick="kiemTraNamNhuan()" value="Kiểm Tra Năm Nhuận">
+    </form>
     <script>
-        let year = Number(prompt("Nhập năm:"))
-        if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
-            alert(`${year} là năm nhuận.`)
-        else
-            alert(`${year} ko phải là năm nhuận.`)
+        function kiemTraNamNhuan() {
+            let year = Number(document.getElementById("year").value)
+            dk1 = year % 400 == 0
+            dk2 = year % 4 == 0 && year % 100 != 0
+            if (dk1 || dk2)
+                alert(year + " là năm nhuận");
+            else
+                alert(year + " không phải là năm nhuận");
+        }
     </script>
 </body>
-
 </html>
