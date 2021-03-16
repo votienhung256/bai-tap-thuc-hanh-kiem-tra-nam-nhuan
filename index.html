@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+
+<body>
+    <script>
+        let year = Number(prompt("Nhập năm:"))
+        if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
+            alert(`${year} là năm nhuận.`)
+        else
+            alert(`${year} ko phải là năm nhuận.`)
+    </script>
+</body>
+
+</html>
